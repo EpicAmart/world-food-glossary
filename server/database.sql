@@ -13,5 +13,5 @@ CREATE TABLE exercise_log(
     exercise_id SERIAL PRIMARY KEY,
     date DATE,
     calories SMALLINT,
-    muscle VARCHAR,
+    muscle VARCHAR(255),
 )

@@ -1,19 +1,19 @@
 import './App.css';
 import React, { Fragment } from "react"
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Tabular from './components/Tabular';
+import Home from './components/Home'
+import Form from './components/Form'
 
 function App() {
   return (
    <Fragment>
-    <Tabular api = {"diet"}/>
-    {/* <Router>
+    <Router>
       <Routes>
-        <Route />
-        <Route />
+        <Route path="home" element={<Home />}/>
+        <Route path="add" element={<Form />}/>
         <Route />
       </Routes>
-    </Router> */}
+    </Router>
    </Fragment>
   );
 }
