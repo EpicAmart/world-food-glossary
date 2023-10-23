@@ -23,41 +23,51 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
+	font-family: 'Courier New';
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	border: 1px solid #ddd;
+	width: 100%;
 }
 
 .HealthApp-main {
 	max-width: 80%;
 	margin: 0 auto;
 	min-height: 100vh;
-	/* padding: 4rem 0; */
 }
 
 .HealthApp-table {
-	display:grid;
+	display: grid;
 	grid-template-rows: 1fr;
+	grid-row-gap: 1rem;
 	place-items: center;
+	margin: 2rem 0;
 }
 
 .HealthApp-form {
@@ -65,11 +75,6 @@ table {
 	grid-template-rows: 1fr;
 	justify-content: center;
     align-items: center;
-	width: 100%;
-}
-
-table {
-	border: 1px solid #ddd;
 	width: 100%;
 }
 
@@ -124,4 +129,10 @@ input[type=submit]:hover {
 	border-radius: 5px;
 	background-color: #f2f2f2;
 	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 10px;
+	font-size: xx-large;
 }

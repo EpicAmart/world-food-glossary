@@ -42,8 +42,6 @@ const Tabular = ({api, headers, keyHeader}) => {
                         {headers.map(header_entry => (
                             <th key={header_entry}>{header_entry.charAt(0).toUpperCase() + header_entry.slice(1)}</th>
                         ))}
-                        <th></th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,7 +51,7 @@ const Tabular = ({api, headers, keyHeader}) => {
                                 <td key={key}>{log_entry[key]}</td>
                             ))}
                             <td><Link to="/add" state={{id_type: keyHeader, id: log_entry[keyHeader], api: api, headers: headers, log_entry: log_entry}}><button className="HealthApp-button">Edit</button></Link></td>
-                            <td><button className="HealthApp-button" onClick={() => deleteData(log_entry[keyHeader])}>Delete</button></td>
+                            <td><button className="HealthApp-button" onClick={() => deleteData(log_entry[keyHeader])}>x</button></td>
                         </tr>
                     ))}
                 </tbody>
