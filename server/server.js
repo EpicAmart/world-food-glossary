@@ -18,7 +18,6 @@ app.post("/diet", async (req, res) => {
         const {calories, carbs, protein, fat} = req.body
         var { date } = req.body
         date = new Date(date)
-        console.log(date)
         const entry = await pool.query("INSERT INTO food_log (date, calories, carbs, protein, fat) VALUES ($1, $2, $3, $4, $5) RETURNING *", [date, calories, carbs, protein, fat]);
         res.json(entry.rows)
     } catch (error) {
