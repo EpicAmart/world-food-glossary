@@ -15,7 +15,6 @@ const Tabular = ({api, headers, keyHeader}) => {
         });
         
         setData(responseJson)
-        
     }
 
     const deleteData = async (id) => {
@@ -58,7 +57,6 @@ const Tabular = ({api, headers, keyHeader}) => {
             </table>
             <Link to="/add" state = {{id_type: keyHeader, id: 0, api: api, headers: headers, log_entry: ""}}><button className="HealthApp-button">Add {api}</button></Link>
         </div>
-        
     </Fragment>
   )
 }
